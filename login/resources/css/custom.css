@@ -22,7 +22,8 @@
 #kc-header {
   width: 520px;
   max-width: 90vw;
-  height: 150px;
+      height: 100px;
+    margin-bottom: 15px;
   margin: 0 0 20px 0;
   text-align: center;
 }
@@ -33,7 +34,7 @@
   background-image: url("../img/logo.png");
   background-repeat: no-repeat;
   background-position: center center;
-  background-size: 360px auto;
+  background-size: 220px auto;
   font-size: 0;
   padding: 0;
   margin: 0;
