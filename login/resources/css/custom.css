@@ -1,0 +1,31 @@
+/* Fondo de toda la página */
+.login-pf body {
+  background: url("../img/background.jpg") no-repeat center center fixed;
+  background-size: cover;
+}
+
+/* Logo en la cabecera de la tarjeta de login */
+#kc-header-wrapper {
+  background-image: url("../img/logo.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  height: 90px;
+  /* oculta el texto del realm que sale por defecto */
+  font-size: 0;
+  padding: 20px 0;
+}
+
+/* Color del botón principal (login) */
+.login-pf .btn-primary {
+  background-color: #004a8f;   /* tu color corporativo */
+  border-color: #004a8f;
+}
+.login-pf .btn-primary:hover {
+  background-color: #003366;  /* un tono más oscuro al pasar el mouse */
+}
+
+/* Opcional: transparencia en la tarjeta para que se vea el fondo */
+.card-pf {
+  background: rgba(255, 255, 255, 0.95);
+}
