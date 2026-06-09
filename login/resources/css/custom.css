@@ -1,72 +1,82 @@
-/* ===== Cloudara Keycloak Login Theme ===== */
+/* ===== Cloudara Keycloak Login ===== */
 
-/* Fondo */
 .login-pf body {
   background: url("../img/background.png") no-repeat center center fixed;
   background-size: cover;
   min-height: 100vh;
+  margin: 0;
 }
 
-/* Centrado general */
+/* Layout general */
 .login-pf-page {
   min-height: 100vh;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   padding: 40px 20px;
+  box-sizing: border-box;
 }
 
-/* Contenedor */
-#kc-container,
-#kc-container-wrapper {
-  width: 100%;
-}
-
-/* Header / logo */
+/* Logo arriba de la tarjeta */
 #kc-header {
-  margin: 0 0 25px 0;
+  width: 520px;
+  max-width: 90vw;
+  height: 150px;
+  margin: 0 0 20px 0;
+  text-align: center;
 }
 
 #kc-header-wrapper {
+  width: 100%;
+  height: 150px;
   background-image: url("../img/logo.png");
   background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
-  height: 150px;
+  background-position: center center;
+  background-size: 360px auto;
   font-size: 0;
   padding: 0;
+  margin: 0;
 }
 
-/* Tarjeta moderna */
+/* Tarjeta */
 .card-pf {
-  width: 100%;
-  max-width: 480px;
-  margin: 0 auto;
-  padding: 38px 42px 34px;
+  width: 520px;
+  max-width: 90vw;
+  margin: 0;
+  padding: 40px 42px 34px;
   background: rgba(255, 255, 255, 0.96);
   border: 0;
   border-top: 4px solid #0078d4;
   border-radius: 14px;
-  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.22);
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.28);
+  box-sizing: border-box;
 }
 
-/* Título */
+/* Header interno */
+.login-pf-header {
+  margin: 0 0 28px 0;
+}
+
 #kc-page-title {
-  font-size: 26px;
+  font-size: 28px;
   font-weight: 400;
   color: #1f2937;
   text-align: center;
-  margin-bottom: 28px;
+  margin: 0;
 }
 
 /* Labels */
-.form-group label {
+.form-group label,
+.pf-c-form__label,
+.pf-c-form__label-text {
   font-size: 13px;
   font-weight: 600;
   color: #374151;
 }
 
 /* Inputs */
+.pf-c-form-control,
 .form-control {
   height: 44px;
   border-radius: 6px;
@@ -75,64 +85,86 @@
   font-size: 14px;
 }
 
+.pf-c-form-control:focus,
 .form-control:focus {
   border-color: #0078d4;
   box-shadow: 0 0 0 3px rgba(0, 120, 212, 0.18);
 }
 
-/* Botón principal */
-.login-pf .btn-primary,
-#kc-login {
+/* Password input group */
+.pf-c-input-group {
+  width: 100%;
+}
+
+.pf-c-input-group .pf-c-form-control {
+  border-radius: 6px 0 0 6px;
+}
+
+.pf-c-input-group .pf-c-button {
   height: 44px;
+  border-radius: 0 6px 6px 0;
+  border-color: #d1d5db;
+  background: #ffffff;
+}
+
+/* Botón */
+#kc-login,
+.login-pf .btn-primary,
+.pf-c-button.pf-m-primary {
+  height: 46px;
   width: 100%;
   background: #0078d4;
   border-color: #0078d4;
   border-radius: 6px;
   font-size: 15px;
   font-weight: 600;
-  transition: all 0.2s ease-in-out;
+  color: #ffffff;
 }
 
+#kc-login:hover,
 .login-pf .btn-primary:hover,
-#kc-login:hover {
+.pf-c-button.pf-m-primary:hover {
   background: #005a9e;
   border-color: #005a9e;
 }
 
-/* Separaciones */
+/* Separación del botón */
 #kc-form-buttons {
-  margin-top: 28px;
+  margin-top: 30px;
 }
 
-#kc-content-wrapper {
-  margin-top: 0;
-}
-
-/* Password eye */
-.input-group-addon {
-  border-radius: 0 6px 6px 0;
-  background: #ffffff;
-  border-color: #d1d5db;
+/* Limpieza de márgenes */
+#kc-content,
+#kc-content-wrapper,
+#kc-form,
+#kc-form-wrapper {
+  margin: 0;
 }
 
 /* Responsive */
 @media (max-width: 600px) {
   .login-pf-page {
-    align-items: flex-start;
-    padding-top: 35px;
+    justify-content: flex-start;
+    padding-top: 40px;
+  }
+
+  #kc-header {
+    height: 110px;
+    margin-bottom: 12px;
   }
 
   #kc-header-wrapper {
-    height: 120px;
+    height: 110px;
+    background-size: 260px auto;
   }
 
   .card-pf {
-    max-width: 100%;
+    width: 100%;
     padding: 30px 24px;
     border-radius: 10px;
   }
 
   #kc-page-title {
-    font-size: 23px;
+    font-size: 24px;
   }
 }
