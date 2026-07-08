@@ -141,6 +141,30 @@
 /* Separación del botón */
 #kc-form-buttons {
   margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Botón cancelar / secundario */
+.pf-c-button.btn-default,
+button[name="cancel-aia"] {
+  height: 46px;
+  width: 100%;
+  background: #a80000;
+  border: 1px solid #dbd1d1;
+  border-radius: 6px;
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+  box-sizing: border-box;
+}
+.pf-c-button.btn-default:hover,
+button[name="cancel-aia"]:hover {
+  background: #720000;
+  border-color: #9ca3af;
+  color: #ffffff;
 }
 
 /* Limpieza de márgenes */
